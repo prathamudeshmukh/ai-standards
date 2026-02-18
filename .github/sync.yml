@@ -10,6 +10,8 @@ group:
         dest: .github/agents/
       - source: .github/code-guidelines/
         dest: .github/code-guidelines/
+      - source: .github/copilot-instructions.md
+        dest: .github/copilot-instructions.md
 
   # squad-wide — outbound
   - repos: |
