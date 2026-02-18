@@ -1,0 +1,29 @@
+name: Sync AI Standards
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - ".github/agents/**"
+      - ".github/code-guidelines/**"
+      - ".github/squads/**"
+      - ".github/sync.yml"
+  workflow_dispatch: {}
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout ai-standards
+        uses: actions/checkout@v4
+
+      - name: Run Repo File Sync
+        uses: Redocly/repo-file-sync-action@main
+        with:
+          GH_PAT: ${{ secrets.GH_PAT }}
+          CONFIG_PATH: .github/sync.yml
+          PR_LABELS: |
+            sync
+            ai-standards
+          COMMIT_PREFIX: "chore(ai-standards): "
+          OVERWRITE_EXISTING_PR: true

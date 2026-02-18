@@ -1,0 +1,31 @@
+group:
+  - repos: |
+      outbound-ui
+      outbound-backend
+    files:
+      # org-wide shared
+      - source: .github/agents/
+        dest: .github/agents/
+      - source: .github/code-guidelines/
+        dest: .github/code-guidelines/
+
+      # squad-wide (outbound only)
+      - source: .github/squads/outbound/context/
+        dest: .github/context/
+      - source: .github/squads/outbound/stories/
+        dest: .github/stories/
+  - repos: |
+      inbound-ui
+      inbound-backend
+    files:
+      # org-wide shared
+      - source: .github/agents/
+        dest: .github/agents/
+      - source: .github/code-guidelines/
+        dest: .github/code-guidelines/
+
+      # squad-wide (inbound only)
+      - source: .github/squads/inbound/context/
+        dest: .github/context/
+      - source: .github/squads/inbound/stories/
+        dest: .github/stories/
