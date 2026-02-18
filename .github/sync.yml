@@ -1,30 +1,31 @@
 group:
+  # org-wide shared — synced to ALL repos
+  - repos: |
+      prathamudeshmukh/outbound-ui
+      prathamudeshmukh/outbound-backend
+      prathamudeshmukh/inbound-ui
+      prathamudeshmukh/inbound-backend
+    files:
+      - source: .github/agents/
+        dest: .github/agents/
+      - source: .github/code-guidelines/
+        dest: .github/code-guidelines/
+
+  # squad-wide — outbound
   - repos: |
       prathamudeshmukh/outbound-ui
       prathamudeshmukh/outbound-backend
     files:
-      # org-wide shared
-      - source: .github/agents/
-        dest: .github/agents/
-      - source: .github/code-guidelines/
-        dest: .github/code-guidelines/
-
-      # squad-wide (outbound only)
       - source: .github/squads/outbound/context/
         dest: .github/context/
       - source: .github/squads/outbound/stories/
         dest: .github/stories/
+
+  # squad-wide — inbound
   - repos: |
       prathamudeshmukh/inbound-ui
       prathamudeshmukh/inbound-backend
     files:
-      # org-wide shared
-      - source: .github/agents/
-        dest: .github/agents/
-      - source: .github/code-guidelines/
-        dest: .github/code-guidelines/
-
-      # squad-wide (inbound only)
       - source: .github/squads/inbound/context/
         dest: .github/context/
       - source: .github/squads/inbound/stories/
