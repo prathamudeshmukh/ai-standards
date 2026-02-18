@@ -8,6 +8,7 @@ on:
       - ".github/code-guidelines/**"
       - ".github/squads/**"
       - ".github/sync.yml"
+      - ".github/workflows/**"
   workflow_dispatch: {}
 
 jobs:
