@@ -19,9 +19,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run Repo File Sync
-        # Using yosiat's fork to fix octokit onSecondaryRateLimit error
-        # Redocly/repo-file-sync-action#139 — switch back once PR #154 is merged
-        uses: yosiat/repo-file-sync-action@b1d18b50a0899ad907d47d7d18a98a07943db3a8
+        uses: BetaHuhn/repo-file-sync-action@v1
         with:
           GH_PAT: ${{ secrets.GH_PAT }}
           CONFIG_PATH: .github/sync.yml

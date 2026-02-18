@@ -1,7 +1,7 @@
 group:
   - repos: |
-      outbound-ui
-      outbound-backend
+      prathamudeshmukh/outbound-ui
+      prathamudeshmukh/outbound-backend
     files:
       # org-wide shared
       - source: .github/agents/
@@ -15,8 +15,8 @@ group:
       - source: .github/squads/outbound/stories/
         dest: .github/stories/
   - repos: |
-      inbound-ui
-      inbound-backend
+      prathamudeshmukh/inbound-ui
+      prathamudeshmukh/inbound-backend
     files:
       # org-wide shared
       - source: .github/agents/
